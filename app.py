@@ -16,18 +16,20 @@ def get_quote():
 
 
 # App Layout
-st.write("Quote of the Day 🌟")
+st.title("Quote of the Day 🌟")
+
+st.divider()
 
 try:
     # Fetch quote
     quote, author = get_quote()
     # Display quote
-    st.write(f"\"{quote}\"")
+    st.subheader(f"\"_{quote}_\"")
     # Display author
-    st.write(f"👤 {author}")
+    st.caption(f"👤 {author}")
 
 except Exception:
     st.write("No quotes today 😵‍💫")
 
 # Display app version
-st.write("App Version: v0.1")
+st.write("App Version: v0.2")
